@@ -1,0 +1,22 @@
+/*
+Write a program to find the area of a segment of a circle with radius r and measure 𝛼 of the central angle.
+Assume 𝜋 = 3.14.
+Formula : (𝜋 * (r*r) * 𝛼) / 360
+ */
+import java.util.Scanner;
+
+public class CalculateAreaOfCircle {
+    public static void main(String[] args) {
+        double radius,angle;
+        double area;
+        double p=3.14;
+
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter radius: ");
+        radius=sc.nextDouble();
+        System.out.print("Enter angle: ");
+        angle=sc.nextDouble();
+        area= (p*(radius*radius)*angle) / 360;
+        System.out.println("area is: "+area);
+    }
+}
