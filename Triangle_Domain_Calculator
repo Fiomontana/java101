@@ -1,0 +1,33 @@
+/*
+Write a program that calculates the area of the triangle whose three side lengths you get from the user.
+
+Formula
+perimeter of the triangle = 2𝑢
+
+𝑢 = (a+b+c) / 2
+
+domain^2  = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+ */
+import java.util.Scanner;
+
+public class CalculateAreaOfTriangle {
+
+    public static void main(String[] args) {
+
+        double firstSide, secondSide, thirdSide;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the firstSide: ");
+        firstSide = input.nextDouble();
+        System.out.print("Enter the secondSide: ");
+        secondSide = input.nextDouble();
+        System.out.print("Enter the thirdSide: ");
+        thirdSide = input.nextDouble();
+
+        double 𝑢 = (firstSide+secondSide+thirdSide) / 2;
+        double domain = Math.sqrt(𝑢 * (𝑢 - firstSide)* (𝑢 - secondSide) * (𝑢 - thirdSide));
+
+        System.out.println("Triangle Domain is " + domain);
+
+
+    }
+}
