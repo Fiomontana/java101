@@ -1,0 +1,39 @@
+/*
+Write a program in Java that prints the total amount of the products purchased from the grocery store,
+according to the kilogram values, to the screen.
+Fruits and KG Prices
+Pear: 2.14 ₺
+Apple : 3.67 ₺
+Tomatoes: 1.11 ₺
+Banana: 0.95 ₺
+Eggplant : 5.00 ₺
+ */
+
+import java.util.Scanner;
+
+public class GroceryCashierProgram {
+    public static void main(String[] args) {
+        double pear=2.14;
+        double apple=3.67;
+        double tomatoes=1.11;
+        double banana=0.95;
+        double eggplant=5;
+        double sum, pearMass, appleMass,tomatoesMass,bananaMass,eggplantMass;
+
+        Scanner sc=new Scanner(System.in);
+        System.out.print("How many kilograms of pears? :");
+        pearMass=sc.nextDouble();
+        System.out.print("How many kilograms of apple? :");
+        appleMass=sc.nextDouble();
+        System.out.print("How many kilograms of tomatoes? :");
+        tomatoesMass=sc.nextDouble();
+        System.out.print("How many kilograms of banana? :");
+        bananaMass=sc.nextDouble();
+        System.out.print("How many kilograms of eggplant? :");
+        eggplantMass=sc.nextDouble();
+
+        sum=(pear*pearMass)+(apple*appleMass)+(tomatoes*tomatoesMass)+(banana*bananaMass)+(eggplant*eggplantMass);
+
+        System.out.print("Gross amount : "+sum+" ₺");
+    }
+}
