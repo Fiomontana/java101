@@ -1,0 +1,24 @@
+/*
+With Java, take the height and weight values from the user and assign them to a variable. Calculate the user's
+"Body Mass Index" according to the formula below and print it on the screen.
+
+Formula : mass (kg) / height(m) * height(m)
+ */
+import java.util.Scanner;
+
+public class BodyMassIndexCalculator {
+
+    public static void main(String[] args) {
+        double kg;
+        double mass;
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter your height(m) :");
+        mass=sc.nextDouble();
+        System.out.print("Enter your mass(kg):");
+        kg=sc.nextDouble();
+        double formula=kg/(mass*mass);
+
+        System.out.print("Your Body Mass Index is : "+formula);
+    }
+}
