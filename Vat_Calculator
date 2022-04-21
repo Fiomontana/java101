@@ -1,0 +1,24 @@
+/*
+If the amount entered is between 0 and 1000 TL, the VAT rate is 18%, if the amount is greater than 1000 TL, 
+write the program that calculates the VAT amount as 8%.
+ */
+import java.util.Scanner;
+
+public class VatCalculator {
+
+    public static void main(String[] args) {
+        float amount;
+
+        System.out.print("Enter the amount: ");
+        Scanner inp = new Scanner(System.in);
+        amount = inp.nextInt();
+
+        if (amount<=1000){
+            System.out.println("Amount with VAT = " + amount*1.18 + "₺" );
+            System.out.println("VAT amount = " + amount*0.18 + "₺");
+        }else{
+            System.out.println("Amount with VAT = " + amount*1.08 + "₺");
+            System.out.println("VAT amount = " + amount*0.08 + "₺");
+        }
+    }
+}
