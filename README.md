@@ -1,2 +1,2 @@
-# java101
-This repository for Pathica.Dev java101 class
+# Java101
+This repository for Pathica.Dev Java101 class
