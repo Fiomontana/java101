@@ -1,0 +1,41 @@
+/*
+
+ */
+
+import java.util.Scanner;
+public class Calculator {
+    public static void main(String[] args) {
+
+        int num1,num2, select;
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter first number:");
+        num1 = input.nextInt();
+        System.out.print("Enter second number:");
+        num2 = input.nextInt();
+        System.out.println("1-Summation\n2-Subtraction\n3-Multiplication\n4-Division");
+        System.out.println("What is your selection?");
+        select = input.nextInt();
+        System.out.println(select);
+
+        switch(select) {
+            case 1:
+                System.out.println("Sum:" +(num1 + num2));
+                break;
+            case 2:
+                System.out.println("Difference:" +(num1 - num2));
+                break;
+            case 3:
+                System.out.println("Multiplication:" +(num1 * num2));
+                break;
+            case 4:
+                if(num2 != 0){
+                    System.out.println("division:" +(num1 - num2));
+                }else {
+                    System.out.println("Any number can not be divided by zero.");
+                }
+                break;
+            default:
+                System.out.println("Some mistake occurred, please try again");
+        }
+    }
