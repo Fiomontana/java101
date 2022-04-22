@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class ActivityAccordingToTemperature {
+    public static void main(String[] args) {
+        int head;
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Enter Temperature : ");
+        head = inp.nextInt();
+        if (head < 5)
+        {
+            System.out.println("You can go skiing");
+        }
+        else if (head < 15)
+        {
+            System.out.println("You can go cinema");
+        }
+        else if ((head > 15) && (head <= 25))
+        {
+            System.out.println("You can go picnic");
+        }
+        else
+        {
+            System.out.println("You can go swimming");
+        }
+    }
+}
