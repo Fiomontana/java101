@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class CalculateAverageNote {
+    private static int Decision(int mark){
+        if (mark < 0 || mark > 100) 
+        {
+            mark = 0;
+        }
+        
+        return mark;
+    }
+    public static void main(String[] args) {
+        int math, physics, literature, chemistry, music;
+
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter Math Note: ");
+        math = sc.nextInt();
+        math = Decision(math);
+        System.out.println(math);
+
+        System.out.print("Enter Physics Note: ");
+        physics = sc.nextInt();
+        physics = Decision(physics);
+
+        System.out.print("Enter Literature Note: ");
+        literature = sc.nextInt();
+        literature = Decision(literature);
+
+        System.out.print("Enter Chemistry Note: ");
+        chemistry = sc.nextInt();
+        chemistry = Decision(chemistry);
+
+        System.out.print("Enter Music Note: ");
+        music=sc.nextInt();
+        music = Decision(music);
+
+        int sum = math + physics + literature + chemistry + music;
+        double avg= sum / 5.0;
+        System.out.print("Average Note: "+avg);
+
+        String result= (avg >55) ? " Pass"  : " Fail";
+        System.out.println(result);
+    }
+}
