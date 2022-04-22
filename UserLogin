@@ -1,0 +1,48 @@
+/*
+
+ */
+
+import java.util.Scanner;
+
+public class UserLogin {
+    public static void main(String[] args) {
+
+        String userName, password, newPassword;
+        int resetPassword;
+
+        Scanner inp = new Scanner(System.in);
+        System.out.println("Username:");
+        userName = inp.nextLine();
+        System.out.println("Password:");
+        password = inp.nextLine();
+
+        if ((userName.equals("root")) && (password.equals("root123"))) {
+            System.out.println("Success");
+        } else if ((!userName.equals("root")) && (password.equals("root123"))) {
+            System.out.println("Wrong username.");
+        } else if ((userName.equals("root")) && (!password.equals("root123"))) {
+            System.out.println("Wrong password!");
+            System.out.println("Would you like to change your password?");
+            System.out.println("1=Yes.\n2=No.");
+            resetPassword = inp.nextInt();
+            switch (resetPassword) {
+                case 1:
+                    System.out.print("New Password: " + inp.nextLine());
+                    newPassword = inp.nextLine();
+                    if (newPassword.equals("root123")) {
+                        System.out.println("Your password is same with old one. Please select new password");
+                        break;
+                    } else {
+                        System.out.println("Your password changed successfully");
+                        break;
+                    }
+                case 2:
+                    System.out.println("Your password could not be reset");
+                    break;
+            }
+        } else {
+            System.out.println("Check your info!");
+        }
+    }
+}
+
